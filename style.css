@@ -26,7 +26,7 @@ html, body {
     /* margin: 0;
     padding: 0; */
     background: 
-        linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Resources/Media/occhioDellaMadre.jpg");
+        linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/occhioDellaMadre.jpg");
 
     background-size: cover;  
     background-position: center;
@@ -88,24 +88,24 @@ html, body {
 
 /* Background delle due immagini */
 .bg-goku {
-    background-image: url(../Resources/Media/Goku.jpg);
+    background-image: url(../Media/Goku.jpg);
 }
 
 .bg-ruffy {
-    background-image: url(../Resources/Media/ruffy.jpg);
+    background-image: url(../Media/ruffy.jpg);
 }
 
 .bg-occhio{
-    background-image: url(../Resources/Media/occhioDellaMadre.jpg);
+    background-image: url(../Media/occhioDellaMadre.jpg);
 }
 .bg-babbarello{
-    background-image: url(../Resources/Media/penna.jpg);
+    background-image: url(../Media/penna.jpg);
 }
 .bg-fabio{
-    background-image: url(../Resources/Media/fabio.jpg);
+    background-image: url(../Media/fabio.jpg);
 }
 .bg-pipareddu{
-    background-image: url(../Resources/Media/pipareddu.jpg);
+    background-image: url(../Media/pipareddu.jpg);
 }
 
 /* Testo sopra le immagini */
@@ -145,18 +145,18 @@ html, body {
 
 /* Background images per ogni box */
 .cartoon-box {
-    background-image: url('../Resources/Media/kidBu.jpg');
+    background-image: url('../Media/kidBu.jpg');
     background-size: cover; 
     background-position: center;
 }
 
 .pencil-box {
-    background-image: url('../Resources/Media/occhioDellaMadre.jpg');
+    background-image: url('../Media/occhioDellaMadre.jpg');
     background-size: cover;
     background-position: center;
 }
 .altro-box{
-    background-image: url('../Resources/Media/Aquila.jpg');
+    background-image: url('../Media/Aquila.jpg');
     background-size: cover;
     background-position: center;
 }

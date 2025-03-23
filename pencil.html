@@ -54,11 +54,11 @@
         <section class="image-container">
             <div class="text-overlay">
                 <h2>
-                    <span class="fw-bold fst-italic text-danger">Cartoon</span> category
+                    <span class="fw-bold fst-italic text-danger">Pencil</span> category
                 </h2>
             </div>
-            <div class="half bg-goku"></div>
-            <div class="half bg-ruffy"></div>
+            <div class="half bg-occhio"></div>
+            <div class="half bg-babbarello"></div>
         </section>
     </header>
 
@@ -68,7 +68,7 @@
     <main class="container mt-5">
         <section class="row justify-content-center">
             <div class="col-12">
-                <h2 class="py-5">Kame<span class="color-q"> gum-gum</span></h2>
+                <h2 class="py-5">Alcuni<span class="color-q"> lavori</span></h2>
             </div>
         </section>
         <!-- Swiper -->
@@ -79,7 +79,7 @@
                         <img src="Media/Goku.jpg" class="rounded-2" alt="">
                     </div>
                     <div class="swiper-slide">
-                        <img src="Media/Aquila.jpg" class="rounded-2" alt="">
+                        <img src="Media/penna.jpg" class="rounded-2" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="Media/kidBu.jpg" class="rounded-2" alt="">
@@ -143,7 +143,37 @@
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- My JS -->
-        <script src="script.js"></script>
+        <script>document.addEventListener("DOMContentLoaded", function() {
+            let page = window.location.pathname.split("/").pop();
+    
+            let backgrounds = {
+                "index.html": "url('../Media/occhioDellaMadre.jpg')",
+                "cartoon.html": "url('../Media/Goku.jpg')",
+                "pencil.html": "url('../Media/sedh.jpg')",
+                "fabio.html": "url('../Media/fabio.jpg')"
+            };
+    
+            if (backgrounds[page]) {
+                document.body.style.backgroundImage = "linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), " + backgrounds[page];
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundPosition = "center";
+                document.body.style.backgroundRepeat = "no-repeat";
+                document.body.style.backgroundAttachment = "fixed";
+            }
+        });
+    
+        // link attivo della pagina nella navbar
+        document.addEventListener("DOMContentLoaded", function() {
+            let links = document.querySelectorAll(".navbar-nav .nav-link"); // Seleziona tutti i link della navbar
+            let currentPage = window.location.pathname.split("/").pop(); // Ottiene il nome della pagina
+    
+            links.forEach(link => {
+                if (link.getAttribute("href") === currentPage) {
+                    link.classList.add("active"); // Aggiunge la classe active al link della pagina attuale
+                }
+            });
+        });
+    </script>
         
         <!-- Swiper pagination -->
         <script>

@@ -69,7 +69,7 @@
         <main class="container mt-5">
             <section class="row align-items-center justify-content-start">
                 <div class="col-12 col-md-2 d-flex justify-content-center">
-                    <img src="../Resources/Media/fabio2.jpg" alt="Immagine" class="img-fluid rounded shadow">
+                    <img src="../Media/fabio2.jpg" alt="Immagine" class="img-fluid rounded shadow">
                 </div>
                 <div class="col-12 col-md-6 d-flex align-items-center">
                     <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugiat libero explicabo ab ad repellendus error, obcaecati officia nam, incidunt veritatis aut amet accusamus maxime quasi!</p>
@@ -80,7 +80,7 @@
                     <p class="fw-bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugiat libero explicabo ab ad repellendus error, obcaecati officia nam, incidunt veritatis aut amet accusamus maxime quasi!</p>
                 </div>
                 <div class="col-12 col-md-2">
-                    <img src="../Resources/Media/sedh.jpg" alt="Immagine" class="img-fluid rounded shadow">
+                    <img src="../Media/sedh.jpg" alt="Immagine" class="img-fluid rounded shadow">
                 </div>
             </section>
         </main>
@@ -126,7 +126,39 @@
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- My JS -->
-        <script src="script.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        let page = window.location.pathname.split("/").pop();
+
+        let backgrounds = {
+            "index.html": "url('../Media/occhioDellaMadre.jpg')",
+            "cartoon.html": "url('../Media/Goku.jpg')",
+            "pencil.html": "url('../Media/sedh.jpg')",
+            "fabio.html": "url('../Media/fabio.jpg')"
+        };
+
+        if (backgrounds[page]) {
+            document.body.style.backgroundImage = "linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), " + backgrounds[page];
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "no-repeat";
+            document.body.style.backgroundAttachment = "fixed";
+        }
+    });
+
+    // link attivo della pagina nella navbar
+    document.addEventListener("DOMContentLoaded", function() {
+        let links = document.querySelectorAll(".navbar-nav .nav-link"); // Seleziona tutti i link della navbar
+        let currentPage = window.location.pathname.split("/").pop(); // Ottiene il nome della pagina
+
+        links.forEach(link => {
+            if (link.getAttribute("href") === currentPage) {
+                link.classList.add("active"); // Aggiunge la classe active al link della pagina attuale
+            }
+        });
+    });
+
+        </script>
         
         <!-- Swiper pagination -->
         <script>
