@@ -20,7 +20,9 @@
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
     </head>
-
+    <body class="body-pencil">
+        
+    
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
         <div class="container-fluid">
@@ -37,7 +39,7 @@
                         <a class="nav-link" href="cartoon.html">Cartoon</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pencil.html">Pencil</a>
+                        <a class="nav-link active" href="pencil.html">Pencil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="fabio.html">Chi sono</a>
@@ -143,36 +145,7 @@
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <!-- My JS -->
-        <script>document.addEventListener("DOMContentLoaded", function() {
-            let page = window.location.pathname.split("/").pop();
-    
-            let backgrounds = {
-                "index.html": "url('../Media/occhioDellaMadre.jpg')",
-                "cartoon.html": "url('../Media/Goku.jpg')",
-                "pencil.html": "url('../Media/sedh.jpg')",
-                "fabio.html": "url('../Media/fabio.jpg')"
-            };
-    
-            if (backgrounds[page]) {
-                document.body.style.backgroundImage = "linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), " + backgrounds[page];
-                document.body.style.backgroundSize = "cover";
-                document.body.style.backgroundPosition = "center";
-                document.body.style.backgroundRepeat = "no-repeat";
-                document.body.style.backgroundAttachment = "fixed";
-            }
-        });
-    
-        // link attivo della pagina nella navbar
-        document.addEventListener("DOMContentLoaded", function() {
-            let links = document.querySelectorAll(".navbar-nav .nav-link"); // Seleziona tutti i link della navbar
-            let currentPage = window.location.pathname.split("/").pop(); // Ottiene il nome della pagina
-    
-            links.forEach(link => {
-                if (link.getAttribute("href") === currentPage) {
-                    link.classList.add("active"); // Aggiunge la classe active al link della pagina attuale
-                }
-            });
-        });
+        <script>
     </script>
         
         <!-- Swiper pagination -->

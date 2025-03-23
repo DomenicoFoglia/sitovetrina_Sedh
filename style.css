@@ -25,9 +25,38 @@ html, body {
     /* height: 100%; */
     /* margin: 0;
     padding: 0; */
-    background: 
-        linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/occhioDellaMadre.jpg");
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
 
+.body-home{
+    background: 
+    linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/occhioDellaMadre.jpg");
+}
+
+.body-cartoon{
+    background: 
+    linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/Goku.jpg");
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.body-pencil{
+    background: 
+    linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/sedh.jpg");
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.body-fabio{
+    background: 
+    linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/fabio.jpg");
     background-size: cover;  
     background-position: center;
     background-repeat: no-repeat;
