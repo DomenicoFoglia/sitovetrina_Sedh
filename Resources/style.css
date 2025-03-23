@@ -1,0 +1,252 @@
+/* Colori */
+:root{
+    --color-p: rgb(254, 185, 20);
+    --color-s: #2e2d2d;
+    --color-t: rgb(248, 240, 220);
+    --color-q: rgb(212, 77, 92);
+}
+.color-p{
+    color: var(--color-p);
+}
+
+.color-s{
+    color: var(--color-s);
+}
+
+.color-t{
+    color: var(--color-t);
+}
+.color-q{
+    color: var(--color-q);
+}
+
+
+html, body {
+    /* height: 100%; */
+    /* margin: 0;
+    padding: 0; */
+    background: 
+        linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Resources/Media/occhioDellaMadre.jpg");
+
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+
+/* Navbar Styling */
+.navbar {
+    background-color: #2d2d2d; 
+}
+
+.navbar .navbar-brand {
+    color: var(--color-t); 
+    font-weight: bold;
+}
+
+.navbar .navbar-toggler {
+    border-color: var(--color-t); 
+}
+
+.navbar .navbar-nav .nav-link {
+    color: var(--color-t); 
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: var(--color-p);
+}
+
+/* Navbar al passaggio del mouse */
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--color-p); 
+}
+
+
+
+/* HEADER */
+/* Contenitore principale */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 50vh; 
+    display: flex;
+    overflow: hidden;
+    border-radius: 30px; 
+}
+
+/* Sezioni delle immagini */
+.half {
+    width: 50%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;  
+    background-repeat: no-repeat;
+}
+
+/* Background delle due immagini */
+.bg-goku {
+    background-image: url(../Resources/Media/Goku.jpg);
+}
+
+.bg-ruffy {
+    background-image: url(../Resources/Media/ruffy.jpg);
+}
+
+.bg-occhio{
+    background-image: url(../Resources/Media/occhioDellaMadre.jpg);
+}
+.bg-babbarello{
+    background-image: url(../Resources/Media/penna.jpg);
+}
+.bg-fabio{
+    background-image: url(../Resources/Media/fabio.jpg);
+}
+.bg-pipareddu{
+    background-image: url(../Resources/Media/pipareddu.jpg);
+}
+
+/* Testo sopra le immagini */
+.text-overlay {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 2; 
+    background: rgba(254, 185, 20, 0.819); 
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Box */
+.box-header {
+    position: relative; 
+    height: 200px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; 
+    border-radius: 10px;
+    overflow: hidden; 
+}
+
+.text-overlay-boxes {
+    text-align: center;
+    background: rgba(254, 185, 20, 0.819); 
+    font-size: 20px;
+    margin-bottom: 15px; 
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+/* Background images per ogni box */
+.cartoon-box {
+    background-image: url('../Resources/Media/kidBu.jpg');
+    background-size: cover; 
+    background-position: center;
+}
+
+.pencil-box {
+    background-image: url('../Resources/Media/occhioDellaMadre.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.altro-box{
+    background-image: url('../Resources/Media/Aquila.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.opaco{
+    background-color: hsla(0,0%,100%, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+
+/* Sweeper card */
+/* body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+} */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--color-t);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.swiper-button-next, .swiper-button-prev{
+    background-color: rgba(254, 185, 20, 0.5); ;
+    border: 2px solid var(--color-t);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    color: var(--color-t);
+}
+
+
+
+/* Footer Style */
+.footer {
+    background-color: #2d2d2d; 
+    color: var(--color-t); 
+    padding: 30px 0; 
+}
+
+.footer .social-icons a {
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.1); 
+}
+
+.footer .footer-links a {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-t);
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.footer .footer-links a:hover {
+    color: var(--color-p); 
+}
+
+.footer .social-icons i {
+    color: var(--color-t); 
+    transition: color 0.3s;
+}
+
+.footer .social-icons i:hover {
+    color: var(--color-p); 
+}
+
+.footer p {
+    font-size: 16px;
+}

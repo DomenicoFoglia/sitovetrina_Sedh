@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sedh</title>
+        <!-- AOS CSS -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!-- Bootstrap CSS CDN  -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredoka:wght@300..700&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+        <!-- My CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cartoon.html">Cartoon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pencil.html">Pencil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fabio.html">Chi sono</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- / Navbar -->
+
+    <!-- Header -->
+    <header class="container mt-5">
+        <section class="image-container">
+            <div class="text-overlay">
+                <h2>
+                    <span class="fw-bold fst-italic text-danger">Cartoon</span> category
+                </h2>
+            </div>
+            <div class="half bg-goku"></div>
+            <div class="half bg-ruffy"></div>
+        </section>
+    </header>
+
+    <!-- / Header -->
+
+    <!-- Cards -->
+    <main class="container mt-5">
+        <section class="row justify-content-center">
+            <div class="col-12">
+                <h2 class="py-5">Kame<span class="color-q"> gum-gum</span></h2>
+            </div>
+        </section>
+        <!-- Swiper -->
+        <section class="row">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Media/Goku.jpg" class="rounded-2" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/Aquila.jpg" class="rounded-2" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/kidBu.jpg" class="rounded-2" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/ruffy.jpg" class="rounded-2" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Media/occhioDellaMadre.jpg" class="rounded-2" alt="">
+                    </div>
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </section>
+        
+    </main>
+    <!-- / Cards -->
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5 mt-5">
+        <div class="container text-center">
+            <!-- Testo del Footer -->
+            <p class="mb-3">© 2025 - Tutti i diritti riservati</p>
+            
+            <!-- Link social -->
+            <div class="social-icons mb-3">
+                <a href="#" class="text-light mx-3">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" class="text-light mx-3">
+                    <i class="fa-brands fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="text-light mx-3">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="text-light mx-3">
+                    <i class="fa-brands fa-youtube fa-2x"></i>
+                </a>
+            </div>
+
+            <!-- Link al sito -->
+            <div class="footer-links">
+                <a href="#" class="text-light mx-3">Contattaci</a>
+            </div>
+        </div>
+    </footer>
+    <!-- / Footer -->
+
+        
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <!-- AOS JS-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <!-- My JS -->
+        <script src="script.js"></script>
+        
+        <!-- Swiper pagination -->
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3,
+                spaceBetween: 30,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+        </script>
+    </body>
+</html>
