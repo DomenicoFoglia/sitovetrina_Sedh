@@ -65,7 +65,7 @@ html, body {
 
 
 /* Navbar Styling */
-.navbar {
+/* .navbar {
     background-color: #2d2d2d; 
 }
 
@@ -88,11 +88,62 @@ html, body {
     color: var(--color-p);
 }
 
-/* Navbar al passaggio del mouse */
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--color-p); 
+} */
+/* Navbar iniziale */
+#mainNavbar {
+    background-color: transparent;
+    transition: background-color 0.4s ease, padding 0.3s ease;
+    padding: 1rem 0;
 }
 
+#mainNavbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 0.5rem 0;
+}
+
+/* logo */
+
+#logo {
+    font-size: 2rem;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
+    transition: all 0.8s ease;
+    z-index: 1;
+}
+
+/* Navbar scrollata */
+#mainNavbar.scrolled #logo {
+    font-size: 1.3rem;
+    left: 1.5rem;
+    transform: translateX(0);
+    top: 0.5rem;
+}
+
+/* Link animati */
+.navbar-nav .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
 
 
 /* HEADER */
