@@ -32,6 +32,8 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 .body-home{
@@ -64,6 +66,16 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bangers', cursive;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 
@@ -239,7 +251,7 @@ html, body {
     background-position: center;
 }
 .altro-box{
-    background-image: url('../Media/Aquila.jpg');
+    background-image: url('../Media/penna.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -317,6 +329,17 @@ html, body {
 
 
   /* OPERATIONS */
+
+.button-tab{
+    width: 200px;  /* Imposta una larghezza fissa per i pulsanti */
+    padding: 10px 20px;  /* Padding per gestire lo spazio interno */
+    text-align: center;  /* Centra il testo */
+    background-color: var(--color-p);  /* Colore di sfondo */
+    color: var(--color-t);  /* Colore del testo */
+    border: none;  /* Rimuove il bordo */
+    border-radius: 8px;  /* Angoli arrotondati */
+    font-size: 1rem;  /* Dimensione del testo */
+}
 .operations {
     max-width: 100rem;
     margin: 12rem auto 0 auto;
@@ -384,9 +407,9 @@ html, body {
 }
 
 .operations__header {
-    font-size: 2.25rem;
-    font-weight: 500;
-    align-self: center;
+    font-family: 'Bangers', cursive;
+    font-size: 1.8rem;
+    line-height: 1.2;
 }
 
 .operations__icon {
