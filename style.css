@@ -7,6 +7,7 @@
     --color-p-opacity: rgba(254, 184, 20, 0.389);
     --color-s-opacity: #2e2d2d3b;
     --color-t-opacity: rgba(248, 240, 220, 0.201);
+    --color-q-opacity: rgba(212, 77, 92, 0.201);
 }
 .color-p{
     color: var(--color-p);
@@ -121,7 +122,7 @@ p {
 /* logo */
 
 #logo {
-    font-size: 2rem;
+    font-size: 8rem;
     font-weight: bold;
     position: absolute;
     left: 50%;
@@ -129,6 +130,7 @@ p {
     top: 1rem;
     transition: all 0.8s ease;
     z-index: 1;
+    color: var(--color-t);
 }
 
 /* Navbar scrollata */
@@ -137,6 +139,7 @@ p {
     left: 1.5rem;
     transform: translateX(0);
     top: 0.5rem;
+    color: var(--color-p);
 }
 
 /* Link animati */
@@ -367,7 +370,7 @@ p {
 }
 
 .operations__tab--1:hover {
-    background-color: var(--color-q);
+    background-color: var(--color-q-opacity);
 }
 
 .operations__tab--2 {
@@ -375,7 +378,7 @@ p {
 }
 
 .operations__tab--2:hover {
-    background-color: var(--color-q);
+    background-color: var(--color-q-opacity);
 }
 
 .operations__tab--3 {
@@ -384,7 +387,7 @@ p {
 }
 
 .operations__tab--3:hover {
-    background-color: var(--color-q);
+    background-color: var(--color-q-opacity);
 }
 
 .operations__tab--active {
