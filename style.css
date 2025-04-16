@@ -221,15 +221,63 @@ p {
 
 /* Box */
 .box-header {
-    position: relative; 
-    height: 200px; 
+    position: relative;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white; 
+    color: white;
     border-radius: 10px;
-    overflow: hidden; 
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.box-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -75%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.17) 50%,
+        rgba(255, 255, 255, 0.05) 100%
+    );
+    transform: rotate(25deg);
+    transition: all 0.7s ease;
+    filter: blur(1px);
+    pointer-events: none;
+}
+
+.box-header:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box-header:hover::after {
+    left: 100%;
+    top: 100%;
+}
+/* Per schermi piccoli senza mouse */
+@keyframes glossyMove {
+    0% {
+        left: -75%;
+        top: -50%;
+    }
+    100% {
+        left: 100%;
+        top: 100%;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .box-header::after {
+        animation: glossyMove 3s linear infinite;
+    }
 }
 
 .text-overlay-boxes {
@@ -263,6 +311,7 @@ p {
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
+
 
 
 /* Sweeper card */
@@ -329,19 +378,27 @@ p {
   .swiper-slide:nth-child(10n) {
     background-color: rgb(54, 94, 77);
   }
+  .swiper-slide img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.swiper-slide img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
 
 
   /* OPERATIONS */
 
 .button-tab{
-    width: 200px;  /* Imposta una larghezza fissa per i pulsanti */
-    padding: 10px 20px;  /* Padding per gestire lo spazio interno */
-    text-align: center;  /* Centra il testo */
-    background-color: var(--color-p);  /* Colore di sfondo */
-    color: var(--color-t);  /* Colore del testo */
-    border: none;  /* Rimuove il bordo */
-    border-radius: 8px;  /* Angoli arrotondati */
-    font-size: 1rem;  /* Dimensione del testo */
+    flex: 1 1 auto;           /* Cresce e si restringe */
+    max-width: 180px;         /* Limite massimo */
+    padding: 8px 16px;        /* Leggermente meno padding per stare comodi */
+    text-align: center;
+    background-color: var(--color-p);
+    color: var(--color-t);
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;  
 }
 .operations {
     max-width: 100rem;
@@ -497,4 +554,11 @@ p {
 
 .footer p {
     font-size: 16px;
+}
+
+@media (max-width: 400px) {
+    .button-tab {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
 }
