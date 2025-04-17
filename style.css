@@ -121,6 +121,7 @@ p {
 
 /* logo */
 
+/* Testo */
 #logo {
     font-size: 8rem;
     font-weight: bold;
@@ -129,17 +130,35 @@ p {
     transform: translateX(-50%);
     top: 1rem;
     transition: all 0.8s ease;
-    z-index: 1;
+    z-index: 2;
     color: var(--color-t);
+}
+
+/* PNG iniziale */
+#logo-png {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8rem;
+    opacity: 0.7;
+    transition: opacity 0.6s ease, top 0.8s ease, width 0.8s ease;
+    z-index: 1;
 }
 
 /* Navbar scrollata */
 #mainNavbar.scrolled #logo {
     font-size: 1.3rem;
-    left: 1.5rem;
-    transform: translateX(0);
     top: 0.5rem;
+    left: 1.5rem;
+    transform: none;
     color: var(--color-p);
+}
+
+#mainNavbar.scrolled #logo-png {
+    opacity: 1;
+    top: 0.5rem;
+    width: 2.5rem;
 }
 
 /* Link animati */
@@ -163,6 +182,19 @@ p {
     width: 100%;
 }
 
+/* Schermi piccoli */
+@media (max-width: 767px) {
+    #logo-png {
+        display: none;
+    }
+
+    #mainNavbar.scrolled #logo-png {
+        display: block;
+        opacity: 1;
+        top: 0.5rem;
+        width: 2.5rem;
+    }
+}
 
 /* HEADER */
 /* Contenitore principale */
@@ -554,6 +586,15 @@ p {
 
 .footer p {
     font-size: 16px;
+}
+.footer-logo-img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo-img:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 400px) {
