@@ -194,6 +194,10 @@ p {
     width: 100%;
 }
 
+.navbar-nav .nav-link.active {
+    color: var(--color-s); /* oppure un colore diretto come #ff5733 */
+}
+
 /* Schermi piccoli */
 @media (max-width: 767px) {
     #logo-png {
