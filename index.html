@@ -16,6 +16,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- FancyBox CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.css">
 
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
@@ -53,7 +55,7 @@
             <section class="image-container">
                 <div class="text-overlay">
                     <h4>
-                        <span class="fw-bold fst-italic text-danger">Anime, matite e passione: </span> storie disegnate a mano, nate dal cuore e cresciute con fantasia.
+                        <span class="fw-bold fst-italic text-danger">Anime, matite e passione: </span> UN GIORNO MI DECIDERò A COLLABORARE COL<span class="fw-bold fst-italic text-danger"> FOGLIA </span>PER FINIRE STO SITO
                     </h4>
                 </div>
                 <div class="half bg-goku"></div>
@@ -129,33 +131,23 @@
                     <h2 class="py-5">Appena<span class="color-q"> pennellati</span></h2>
                 </div>
             </section>
-            <!-- Swiper -->
-            <section class="row">
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="Media/Goku.jpg" class="rounded-2" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Media/Aquila.jpg" class="rounded-2" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Media/kidBu.jpg" class="rounded-2" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Media/ruffy.jpg" class="rounded-2" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="Media/occhioDellaMadre.jpg" class="rounded-2" alt="">
-                        </div>
-                        
-                    </div>
-                    <!-- <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div> -->
+
+            <section class="d-flex justify-content-center align-items-center">
+                <div class="gallery">
+                    <a href="Media/Goku.jpg" data-fancybox="gallery" data-caption="Goku">
+                        <img src="Media/Goku.jpg" alt="Goku" class="rounded-3 w-100">
+                    </a>
+                    <a href="Media/kidBu.jpg" data-fancybox="gallery" data-caption="Kid Bu">
+                        <img src="Media/kidBu.jpg" alt="Kid Bu" class="rounded-3 w-100">
+                    </a>
+                    <a href="Media/ruffy.jpg" data-fancybox="gallery" data-caption="Ruffy">
+                        <img src="Media/ruffy.jpg" alt="Ruffy" class="rounded-3 w-100">
+                    </a>
+                    <a href="Media/occhioDellaMadre.jpg" data-fancybox="gallery" data-caption="Occhio">
+                        <img src="Media/occhioDellaMadre.jpg" alt="Occhio" class="rounded-3 w-100">
+                    </a>
                 </div>
             </section>
-            
         </main>
         <!-- / Cards -->
 
@@ -259,9 +251,27 @@
         <!-- Swiper pagination -->
         <script>
             var swiper = new Swiper(".mySwiper", {
-                effect: "cards",
-                grabCursor: true,
-            });
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 20,
+      stretch: 0,
+      depth: 150,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
         </script>
 
 
@@ -298,5 +308,10 @@
                 .classList.add('operations__content--active');
             });
         </script>
+
+        <!-- FancyBox JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.js"></script>
+        
     </body>
 </html>
