@@ -38,8 +38,7 @@ html, body {
 }
 
 .body-home{
-    background: 
-    linear-gradient(rgba(250, 248, 248, 0.9), rgba(244, 238, 238, 0.7)), url("../Media/occhioDellaMadre.jpg");
+    background-color: var(--color-p);
 }
 
 .body-cartoon{
