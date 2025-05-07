@@ -472,9 +472,24 @@ p {
 
 .operations__content--active {
     display: grid;
-    grid-template-columns: clamp(4rem, 10vw, 7rem) 1fr;
-    column-gap: 3rem;
+    grid-template-columns: clamp(4rem, 10vw, 7rem) 1fr 1fr;
+    column-gap: 9rem;
     row-gap: 0.5rem;
+    align-items: center;
+}
+
+.operations__image-wrapper img {
+    max-width: 15rem;
+}
+
+@media (max-width: 768px) {
+    .operations__content--active {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+    }
+    .operations__image-wrapper {
+        text-align: center;
+    }
 }
 
 .operations__header {
