@@ -114,7 +114,7 @@ p {
 }
 
 #mainNavbar.scrolled {
-    background-color: var(--color-t);
+    background-color: var(--color-s);
     padding: 0.5rem 0;
 }
 
@@ -129,27 +129,60 @@ p {
     transform: translateX(-50%);
     top: 1rem;
     transition: all 0.8s ease;
-    z-index: 2;
+    z-index: 1;
     color: var(--color-t);
+    backdrop-filter: blur(4px);
     
 }
 
+
 #logo img {
-    width: 10rem;
+    width: 20rem;
     transition: all 0.8s ease;
-    /* filter: brightness(0) saturate(100%) invert(38%) sepia(50%) saturate(400%) hue-rotate(200deg); */
+    /* filter: brightness(0) saturate(0); */
+
+}
+#logo .logo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);  
+    z-index: 2;  
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 /* PNG iniziale */
 #logo-png {
     position: absolute;
-    top: 1rem;
+    top: 0.3rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 8rem;
+    width: 10rem;
     opacity: 0.7;
     transition: opacity 0.6s ease, top 0.8s ease, width 0.8s ease;
-    z-index: 1;
+    z-index: 2;
+}
+
+#logo-text {
+    display: block;
+    font-size: 10.2rem;
+    color: var(--color-t);
+    text-align: center;
+    margin-top: 0.3rem;
+    opacity: 1;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.navbar-toggler {
+    display: none; 
+}
+
+#burger-button img {
+    width: 7rem;  
+    height: auto; 
 }
 
 /* Navbar scrollata */
@@ -159,23 +192,47 @@ p {
     left: 1.5rem;
     transform: none;
     color: var(--color-p);
+    backdrop-filter: none;
 }
 
 #mainNavbar.scrolled #logo img {
-    width: 3rem;
+    width: 4rem;
+    backdrop-filter: none;
+    filter: brightness(1000) saturate(100) hue-rotate(5deg);
+    /* filter: hue-rotate(180deg) saturate(1.5); */
 }
 
 #mainNavbar.scrolled #logo-png {
     opacity: 1;
-    top: 0.5rem;
-    width: 2.5rem;
+    top: -2.5rem;
+    width: 5rem;
+    backdrop-filter: none;
 }
+
+#mainNavbar.scrolled #logo-text {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    backdrop-filter: none;
+}
+#mainNavbar.scrolled .nav-link {
+    color: var(--color-t);
+}
+
+#mainNavbar.scrolled .nav-link.active {
+    color: var(--color-p);
+}
+
+#mainNavbar.scrolled .navbar-toggler {
+    display: block;
+}
+
 
 /* Link animati */
 .navbar-nav .nav-link {
     position: relative;
     transition: color 0.3s ease;
-    color: var(--color-p)
+    color: var(--color-q)
 }
 
 .navbar-nav .nav-link::after {
@@ -194,7 +251,9 @@ p {
 }
 
 .navbar-nav .nav-link.active {
-    color: var(--color-s); /* oppure un colore diretto come #ff5733 */
+    color: var(--color-t);
+    /* background-color: var(--color-q);
+    border: 2px solid var(--color-t-opacity); */
 }
 
 /* Schermi piccoli */
@@ -209,6 +268,10 @@ p {
         top: 0.5rem;
         width: 2.5rem;
     }
+    #burger-button {
+        display: none; 
+    }
+    
 }
 
 /* HEADER */
@@ -402,14 +465,14 @@ p {
 
 .button-tab{
     flex: 1 1 auto;           /* Cresce e si restringe */
-    max-width: 180px;         /* Limite massimo */
+    max-width: 180px;         
     padding: 8px 16px;        /* Leggermente meno padding per stare comodi */
     text-align: center;
     background-color: var(--color-p);
     color: var(--color-t);
-    border: none;
+    border: 2px solid var(--color-q);
     border-radius: 8px;
-    font-size: 0.9rem;  
+    font-size: 1rem;  
 }
 .operations {
     max-width: 100rem;
