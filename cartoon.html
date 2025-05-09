@@ -6,49 +6,57 @@
         <title>Sedh</title>
         <!-- AOS CSS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!-- Bootstrap CSS CDN  -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredoka:wght@300..700&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- FancyBox CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.css">
 
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNEMC9L655"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MNEMC9L655');
+        </script>
     </head>
     <body class="body-cartoon">
     
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+        <div class="container-fluid position-relative">
+            <a class="navbar-brand" id="logo" href="index.html">
+                <img src="/media/firma_Sedh.png" alt="Firma" class="logo-img">
+                <!-- <h1><span id="logo-text">Art</span></h1> -->
+                
+            </a>
+            <img src="/media/LogoSedh.png" id="logo-png" alt="Logo piccolo" class="logo-img ">
+            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation" id="burger-button">
+                <img src="/media/DigitalBeef.png" alt="Menu">
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="cartoon.html">Cartoon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pencil.html">Pencil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fabio.html">Chi sono</a>
-                    </li>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item me-3"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="cartoon.html">Cartoon</a></li>
+                    <li class="nav-item me-3"><a class="nav-link" href="pencil.html">Penna</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="fabio.html">Chi sono</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
     <!-- / Navbar -->
 
     <!-- Header -->
@@ -59,8 +67,8 @@
                     <span class="fw-bold fst-italic text-danger">Cartoon</span> category
                 </h2>
             </div>
-            <div class="half bg-goku"></div>
-            <div class="half bg-ruffy"></div>
+            <div class="half bg-cartoon-1"></div>
+            <div class="half bg-cartoon-2"></div>
         </section>
     </header>
 
@@ -68,37 +76,69 @@
 
     <!-- Cards -->
     <main class="container mt-5">
-        <section class="row justify-content-center">
+        <!-- <section class="row justify-content-center">
             <div class="col-12">
                 <h2 class="py-5">Kame<span class="color-q"> gum-gum</span></h2>
             </div>
-        </section>
-        <!-- Swiper -->
-        <section class="row">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="Media/Goku.jpg" class="rounded-2" alt="">
+        </section> -->
+
+        <section class="d-flex justify-content-center align-items-center">
+            <article class="row justify-content-center">
+                <div class="col-5">
+                    <div class="gallery">
+                        <a href="media/paint/cartoon/Charmander_W.png" data-fancybox="gallery" data-caption="Charmander">
+                            <img src="media/paint/cartoon/Charmander_W.png" alt="Charmander" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Homer_W.png" data-fancybox="gallery" data-caption="Homer">
+                            <img src="media/paint/cartoon/Homer_W.png" alt="Homer" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Mickey_Mouse_W.png" data-fancybox="gallery" data-caption="Mickey Mouse">
+                            <img src="media/paint/cartoon/Mickey_Mouse_W.png" alt="Mickey Mouse" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Evil_Buu_W.png" data-fancybox="gallery" data-caption="Evil Buu">
+                            <img src="media/paint/cartoon/Evil_Buu_W.png" alt="Evil Buu" class="rounded-3 w-100">
+                        </a>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="Media/Aquila.jpg" class="rounded-2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Media/kidBu.jpg" class="rounded-2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Media/ruffy.jpg" class="rounded-2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Media/occhioDellaMadre.jpg" class="rounded-2" alt="">
-                    </div>
-                    
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
+                <div class="col-5">
+                    <div class="gallery col-5">
+                        <a href="media/paint/cartoon/Nuvola_W.png" data-fancybox="gallery" data-caption="Nuvola speedy">
+                            <img src="media/paint/cartoon/Nuvola_W.png" alt="Nuvola speedy" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Lucky_luke_W.png" data-fancybox="gallery" data-caption="Lucky Luke">
+                            <img src="media/paint/cartoon/Lucky_luke_W.png" alt="Lucky Luke" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Mario_W.png" data-fancybox="gallery" data-caption="Super Mario">
+                            <img src="media/paint/cartoon/Mario_W.png" alt="Super Mario" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Queen_W.png" data-fancybox="gallery" data-caption="Queen">
+                            <img src="media/paint/cartoon/Queen_W.png" alt="Queen" class="rounded-3 w-100">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-5 mt-2">
+                    <div class="gallery col-5">
+                        <a href="media/paint/cartoon/Wonder_Boy_W.png" data-fancybox="gallery" data-caption="Wonder_Boy">
+                            <img src="media/paint/cartoon/Wonder_Boy_W.png" alt="Wonder_Boy" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Hulk_W.png" data-fancybox="gallery" data-caption="Hulk">
+                            <img src="media/paint/cartoon/Hulk_W.png" alt="Hulk" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Kid_Goku_W.png" data-fancybox="gallery" data-caption="Kid Goku">
+                            <img src="media/paint/cartoon/Kid_Goku_W.png" alt="Kid Goku" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/paint/cartoon/Ruffy_W.png" data-fancybox="gallery" data-caption="Ruffy">
+                            <img src="media/paint/cartoon/Ruffy_W.png" alt="Ruffy" class="rounded-3 w-100">
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </article>
+            
         </section>
+    
         
     </main>
     <!-- / Cards -->
@@ -107,9 +147,14 @@
     <!-- Footer -->
     <footer class="footer bg-dark text-light py-5 mt-5">
         <div class="container text-center">
-            <!-- Testo del Footer -->
+    
+            <!-- Logo -->
+            <div class="footer-logo mb-4">
+                <img src="/media/logo_Sedh-removebg.png" alt="Logo Sedh" class="footer-logo-img">
+            </div>
+    
             <p class="mb-3">© 2025 - Tutti i diritti riservati</p>
-            
+    
             <!-- Link social -->
             <div class="social-icons mb-3">
                 <a href="#" class="text-light mx-3">
@@ -125,7 +170,7 @@
                     <i class="fa-brands fa-youtube fa-2x"></i>
                 </a>
             </div>
-
+    
             <!-- Link al sito -->
             <div class="footer-links">
                 <a href="#" class="text-light mx-3">Contattaci</a>
@@ -142,27 +187,43 @@
         <script>
             AOS.init();
         </script>
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- My JS -->
-        <script>
-            
-        </script>
         
-        <!-- Swiper pagination -->
         <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
+            window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('mainNavbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
             });
         </script>
+        <script>
+            const tabs = document.querySelectorAll('.operations__tab');
+            const tabsContainer = document.querySelector('.operations__tab-container');
+            const tabsContent = document.querySelectorAll('.operations__content');
+
+            tabsContainer.addEventListener('click', function (e) {
+            const clicked = e.target.closest('.operations__tab');
+
+            
+            if (!clicked) return;
+
+            
+            tabs.forEach(t => t.classList.remove('operations__tab--active'));
+            tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
+            clicked.classList.add('operations__tab--active');
+
+            
+            document
+                .querySelector(`.operations__content--${clicked.dataset.tab}`)
+                .classList.add('operations__content--active');
+            });
+        </script>
+
+        <!-- FancyBox JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.js"></script>
     </body>
 </html>

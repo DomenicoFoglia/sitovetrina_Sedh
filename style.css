@@ -232,7 +232,8 @@ p {
 .navbar-nav .nav-link {
     position: relative;
     transition: color 0.3s ease;
-    color: var(--color-q)
+    color: var(--color-q);
+    font-size: large;
 }
 
 .navbar-nav .nav-link::after {
@@ -296,24 +297,28 @@ p {
 
 /* Background delle due immagini */
 .bg-goku {
-    background-image: url(../Media/Goku.jpg);
+    background-image: url(../media/homeP/Kid_Goku_Home_W.png);
 }
 
 .bg-ruffy {
-    background-image: url(../Media/ruffy.jpg);
+    background-image: url(../media/homeP/Ruffy_Home_W.png);
 }
 
-.bg-occhio{
-    background-image: url(../Media/occhioDellaMadre.jpg);
+.bg-cartoon-1{
+    background-image: url(../media/cartoonP/Bowser_Cartoon_Category_W.png);
+}
+
+.bg-cartoon-2{
+    background-image: url(../media/cartoonP/Mario_Cartoon_Category_W.png);
 }
 .bg-babbarello{
-    background-image: url(../Media/penna.jpg);
+    background-image: url(../media/penna.jpg);
 }
 .bg-fabio{
-    background-image: url(../Media/fabio.jpg);
+    background-image: url(../media/fabio.jpg);
 }
 .bg-pipareddu{
-    background-image: url(../Media/pipareddu.jpg);
+    background-image: url(../media/pipareddu.jpg);
 }
 
 /* Testo sopra le immagini */
@@ -401,18 +406,18 @@ p {
 
 /* Background images per ogni box */
 .cartoon-box {
-    background-image: url('../Media/kidBu.jpg');
+    background-image: url('../Media/paint/cartoon/Kid_Buu_W.png');
     background-size: cover; 
     background-position: center;
 }
 
 .pencil-box {
-    background-image: url('../Media/occhioDellaMadre.jpg');
+    background-image: url('../Media/paint/Cara_Delevingne_W.png');
     background-size: cover;
     background-position: center;
 }
 .altro-box{
-    background-image: url('../Media/penna.jpg');
+    background-image: url('../Media/penna/pen_W.png');
     background-size: cover;
     background-position: center;
 }
