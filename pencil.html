@@ -6,48 +6,59 @@
         <title>Sedh</title>
         <!-- AOS CSS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Link Swiper's CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!-- Bootstrap CSS CDN  -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <!-- Google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fredoka:wght@300..700&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
         <!-- Font Awesome -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- FancyBox CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.css">
 
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNEMC9L655"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MNEMC9L655');
+        </script>
     </head>
     <body class="body-pencil">
         
     
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Logo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cartoon.html">Cartoon</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="pencil.html">Pencil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="fabio.html">Chi sono</a>
-                    </li>
-                </ul>
+        <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
+            <div class="container-fluid position-relative">
+                <a class="navbar-brand" id="logo" href="index.html">
+                    <img src="/media/firma_Sedh.png" alt="Firma" class="logo-img">
+                    
+                </a>
+                <img src="/media/LogoSedh.png" id="logo-png" alt="Logo piccolo" class="logo-img ">
+                <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item me-3"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item me-3"><a class="nav-link" href="cartoon.html">Cartoon</a></li>
+                        <li class="nav-item me-3"><a class="nav-link active" href="pencil.html">Ink & Pencil</a></li>
+                        <li class="nav-item me-3"><a class="nav-link" href="artworks.html">Artworks</a></li>
+                        <li class="nav-item"><a class="nav-link" href="fabio.html">Chi sono</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+        
+        <!-- / Navbar -->
     
     <!-- / Navbar -->
 
@@ -56,11 +67,11 @@
         <section class="image-container">
             <div class="text-overlay">
                 <h2>
-                    <span class="fw-bold fst-italic text-danger">Pencil</span> category
+                    <span class="fw-bold fst-italic text-danger">Pencil</span> & Ink
                 </h2>
             </div>
-            <div class="half bg-occhio"></div>
-            <div class="half bg-babbarello"></div>
+            <div class="half bg-pencil-1"></div>
+            <div class="half bg-pencil-2"></div>
         </section>
     </header>
 
@@ -68,36 +79,79 @@
 
     <!-- Cards -->
     <main class="container mt-5">
-        <section class="row justify-content-center">
-            <div class="col-12">
-                <h2 class="py-5">Alcuni<span class="color-q"> lavori</span></h2>
-            </div>
-        </section>
-        <!-- Swiper -->
-        <section class="row">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="Media/Goku.jpg" class="rounded-2" alt="">
+        <section class="d-flex justify-content-center align-items-center">
+            <article class="row justify-content-center">
+                <div class="col-5">
+                    <div class="gallery">
+                        <a href="media/penna/Burger_1_W.png" data-fancybox="gallery" data-caption="Burger">
+                            <img src="media/penna/Burger_1_W.png" alt="Burger" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Burger_2_W.png" data-fancybox="gallery" data-caption="Burger 2">
+                            <img src="media/penna/Burger_2_W.png" alt="Burger_2" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Burger_3_W.png" data-fancybox="gallery" data-caption="Burger 3">
+                            <img src="media/penna/Burger_3_W.png" alt="Burger 3" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Morzello_W.png" data-fancybox="gallery" data-caption="Morzello">
+                            <img src="media/penna/Morzello_W.png" alt="Morzello" class="rounded-3 w-100">
+                        </a>
                     </div>
-                    <div class="swiper-slide">
-                        <img src="Media/penna.jpg" class="rounded-2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Media/kidBu.jpg" class="rounded-2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Media/ruffy.jpg" class="rounded-2" alt="">
-                    </div>
-                    <div class="swiper-slide">
-                        <img src="Media/occhioDellaMadre.jpg" class="rounded-2" alt="">
-                    </div>
-                    
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
+                <div class="col-5">
+                    <div class="gallery col-5">
+                        <a href="media/penna/Jonny_Deep_Sparrow_W.png" data-fancybox="gallery" data-caption="Jonny Depp Sparrow">
+                            <img src="media/penna/Jonny_Deep_Sparrow_W.png" alt="Jonny Deep Sparrow" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Jack_Nicholson_Joker_W.png" data-fancybox="gallery" data-caption="Jack Nicholson Joker">
+                            <img src="media/penna/Jack_Nicholson_Joker_W.png" alt="Jack Nicholson Joker" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Bob_Marley_W.png" data-fancybox="gallery" data-caption="Bob Marley">
+                            <img src="media/penna/Bob_Marley_W.png" alt="Bob Marley" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Bill_The_Butcher_W.png" data-fancybox="gallery" data-caption="Bill The Butcher ">
+                            <img src="media/penna/Bill_The_Butcher_W.png" alt="Bill The Butcher" class="rounded-3 w-100">
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                <div class="col-5 mt-2">
+                    <div class="gallery col-5">
+                        <a href="media/penna/Edwige_Fenech_W.png" data-fancybox="gallery" data-caption="Edwige Fenech">
+                            <img src="media/penna/Edwige_Fenech_W.png" alt="Edwige Fenech" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Eye_detail_W.png" data-fancybox="gallery" data-caption="Eye detail">
+                            <img src="media/penna/Eye_detail_W.png" alt="Eye detail" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Lee_Van_Cleef_W.png" data-fancybox="gallery" data-caption="Lee Van Cleef">
+                            <img src="media/penna/Lee_Van_Cleef_W.png" alt="Lee Van Cleef" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Saul_W.png" data-fancybox="gallery" data-caption="Saul">
+                            <img src="media/penna/Saul_W.png" alt="Saul" class="rounded-3 w-100">
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="col-5 mt-2">
+                    <div class="gallery col-5">
+                        <a href="media/penna/Biliardino_W.png" data-fancybox="gallery" data-caption="Biliardino">
+                            <img src="media/penna/Biliardino_W.png" alt="Biliardino" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Eagle_W.png" data-fancybox="gallery" data-caption="Eagle">
+                            <img src="media/penna/Eagle_W.png" alt="Eagle" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Ray_Charles_W.png" data-fancybox="gallery" data-caption="Ray Charles">
+                            <img src="media/penna/Ray_Charles_W.png" alt="Ray Charles" class="rounded-3 w-100">
+                        </a>
+                        <a href="media/penna/Sketch.jpeg" data-fancybox="gallery" data-caption="Sketch">
+                            <img src="media/penna/Sketch.jpeg" alt="Sketch" class="rounded-3 w-100">
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </article>
+            
         </section>
         
     </main>
@@ -142,26 +196,43 @@
         <script>
             AOS.init();
         </script>
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <!-- My JS -->
+
         <script>
-    </script>
-        
-        <!-- Swiper pagination -->
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 3,
-                spaceBetween: 30,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
+            window.addEventListener('scroll', () => {
+                const navbar = document.getElementById('mainNavbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
             });
         </script>
+        <script>
+            const tabs = document.querySelectorAll('.operations__tab');
+            const tabsContainer = document.querySelector('.operations__tab-container');
+            const tabsContent = document.querySelectorAll('.operations__content');
+
+            tabsContainer.addEventListener('click', function (e) {
+            const clicked = e.target.closest('.operations__tab');
+
+            
+            if (!clicked) return;
+
+            
+            tabs.forEach(t => t.classList.remove('operations__tab--active'));
+            tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+
+            clicked.classList.add('operations__tab--active');
+
+            
+            document
+                .querySelector(`.operations__content--${clicked.dataset.tab}`)
+                .classList.add('operations__content--active');
+            });
+        </script>
+        
+        <!-- FancyBox JS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.js"></script>
     </body>
 </html>

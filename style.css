@@ -180,10 +180,6 @@ p {
     display: none; 
 }
 
-#burger-button img {
-    width: 7rem;  
-    height: auto; 
-}
 
 /* Navbar scrollata */
 #mainNavbar.scrolled #logo {
@@ -234,6 +230,7 @@ p {
     transition: color 0.3s ease;
     color: var(--color-q);
     font-size: large;
+    z-index: 2;
 }
 
 .navbar-nav .nav-link::after {
@@ -311,9 +308,21 @@ p {
 .bg-cartoon-2{
     background-image: url(../media/cartoonP/Mario_Cartoon_Category_W.png);
 }
-.bg-babbarello{
-    background-image: url(../media/penna.jpg);
+
+.bg-pencil-1{
+    background-image: url(../media/penna/Bob_Marley_W.png);
 }
+.bg-pencil-2{
+    background-image: url(../media/penna/pen_w.png);
+}
+
+.bg-artworks-1{
+    background-image: url(../media/paint/Monica_Bellucci_W.png);
+}
+.bg-artworks-2{
+    background-image: url(../media/paint/Cara_Delevingne_W.png);
+}
+
 .bg-fabio{
     background-image: url(../media/fabio.jpg);
 }
