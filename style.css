@@ -132,7 +132,7 @@ p {
     z-index: 1;
     color: var(--color-t);
     backdrop-filter: blur(4px);
-    
+    border-radius: 2rem;
 }
 
 
@@ -194,7 +194,7 @@ p {
 #mainNavbar.scrolled #logo img {
     width: 4rem;
     backdrop-filter: none;
-    filter: brightness(1000) saturate(100) hue-rotate(5deg);
+    filter: brightness(3) saturate(90) ;
     /* filter: hue-rotate(180deg) saturate(1.5); */
 }
 
@@ -280,7 +280,9 @@ p {
     height: 90vh; 
     display: flex;
     overflow: hidden;
-    border-radius: 30px; 
+    border-radius: 2rem;
+    border: 10px solid var(--color-s); 
+    
 }
 
 /* Sezioni delle immagini */
@@ -420,13 +422,13 @@ p {
     background-position: center;
 }
 
-.pencil-box {
+/* .pencil-box {
     background-image: url('../Media/penna/pen_W.png');
     background-size: cover;
     background-position: center;
-}
+} */
 .realistic-box{
-    background-image: url('../Media/paint/Cara_Delevingne_W.png');
+    background-image: url('../Media/penna/Bill_The_butcher_W.png');
     background-size: cover;
     background-position: center;
 }
@@ -623,6 +625,13 @@ p {
     border-radius: 50%;
 }
 
+.social-icons {
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons :hover {
+    transform: scale(1.5); 
+}
 
 /* Footer Style */
 .footer {
@@ -631,13 +640,7 @@ p {
     padding: 30px 0; 
 }
 
-.footer .social-icons a {
-    transition: transform 0.3s ease-in-out;
-}
 
-.footer .social-icons a:hover {
-    transform: scale(1.1); 
-}
 
 .footer .footer-links a {
     font-size: 16px;
