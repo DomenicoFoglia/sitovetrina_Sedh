@@ -296,40 +296,40 @@ p {
 
 /* Background delle due immagini */
 .bg-goku {
-    background-image: url(../media/homeP/Kid_Goku_Home_W.png);
+    background-image: url(../media/homeP/Kid_Goku_Home_We.webp);
 }
 
 .bg-ruffy {
-    background-image: url(../media/homeP/Ruffy_Home_W.png);
+    background-image: url(../media/homeP/Ruffy_Home_We.webp);
 }
 
 .bg-cartoon-1{
-    background-image: url(../media/cartoonP/Bowser_Cartoon_Category_W.png);
+    background-image: url(../media/cartoonP/Bowser_Cartoon_Category_We.webp);
 }
 
 .bg-cartoon-2{
-    background-image: url(../media/cartoonP/Mario_Cartoon_Category_W.png);
+    background-image: url(../media/cartoonP/Mario_Cartoon_Category_We.webp);
 }
 
 .bg-pencil-1{
-    background-image: url(../media/penna/Bob_Marley_W.png);
+    background-image: url(../media/RealistiP/Saul_Realisti_Category_We.webp);
 }
 .bg-pencil-2{
-    background-image: url(../media/penna/pen_w.png);
+    background-image: url(../media/RealistiP/Bob_Marley_We.webp);
 }
 
 .bg-artworks-1{
-    background-image: url(../media/paint/Monica_Bellucci_W.png);
+    background-image: url(../media/ArtworkP/Monica_Bellucci_Artwork_Category_We.webp);
 }
 .bg-artworks-2{
-    background-image: url(../media/paint/Cara_Delevingne_W.png);
+    background-image: url(../media/ArtworkP/Cara_Delevingne_Artwork_Category_We.webp);
 }
 
 .bg-fabio{
-    background-image: url(../media/fabio.jpg);
+    background-image: url(../media/ChiSonoP/Sedh_We.webp);
 }
 .bg-pipareddu{
-    background-image: url(../media/pipareddu.jpg);
+    background-image: url(../media/ChiSonoP/Pipareddu_We.webp);
 }
 
 /* Testo sopra le immagini */
