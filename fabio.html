@@ -24,6 +24,12 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
         <!-- FancyBox CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.css">
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="media/favicon/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="media/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="media/favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png" />
+        <link rel="manifest" href="media/favicon/site.webmanifest" />
 
         <!-- My CSS -->
         <link rel="stylesheet" href="style.css">
@@ -70,11 +76,11 @@
         <!-- Header -->
         <header class="container mt-5">
             <section class="image-container shadow">
-                <!-- <div class="text-overlay">
-                    <h4>
-                        <span class="fw-bold fst-italic text-danger">Lordone</span> ipsum dolor sit amet consectetur adipisicing elit. Doloribus, inventore.
-                    </h4>
-                </div> -->
+                <div class="text-overlay">
+                    <h1>
+                        <span class="fw-bold fst-italic text-danger">Fabio</span>
+                    </h1>
+                </div>
                 <div class="half bg-fabio"></div>
                 <div class="half bg-pipareddu"></div>
             </section>
@@ -172,10 +178,19 @@
         <script>
             window.addEventListener('scroll', () => {
                 const navbar = document.getElementById('mainNavbar');
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
+                const isHome = document.body.classList.contains('body-home');
+
+                if (isHome && window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                } else if (isHome) {
+                navbar.classList.remove('scrolled');
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                const navbar = document.getElementById('mainNavbar');
+                if (!document.body.classList.contains('body-home')) {
+                navbar.classList.add('scrolled');
                 }
             });
         </script>
