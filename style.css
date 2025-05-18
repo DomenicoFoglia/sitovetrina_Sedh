@@ -417,7 +417,7 @@ p {
 
 /* Background images per ogni box */
 .cartoon-box {
-    background-image: url('../Media/paint/cartoon/Kid_Buu_W.png');
+    background-image: url('../Media/homeP/Boxes/Kid_Buu_We.webp');
     background-size: cover; 
     background-position: center;
 }
@@ -428,12 +428,12 @@ p {
     background-position: center;
 } */
 .realistic-box{
-    background-image: url('../Media/penna/Bill_The_butcher_W.png');
+    background-image: url('../Media/homeP/Boxes/Bill_The_butcher_We.webp');
     background-size: cover;
     background-position: center;
 }
 .artworks-box {
-    background-image: url('../Media/paint/Monica_Bellucci_W.png');
+    background-image: url('../Media/homeP/Boxes/Monica_Bellucci_We.webp');
     background-size: cover;
     background-position: center;
 }
