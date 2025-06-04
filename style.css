@@ -131,8 +131,9 @@ p {
     transition: all 0.8s ease;
     z-index: 1;
     color: var(--color-t);
-    backdrop-filter: blur(4px);
-    border-radius: 2rem;
+    /* backdrop-filter: blur(4px); */
+    border-radius: 10rem;
+    background-color: var(--color-p);
 }
 
 
@@ -189,6 +190,7 @@ p {
     transform: none;
     color: var(--color-p);
     backdrop-filter: none;
+    background-color: var(--color-s);
 }
 
 #mainNavbar.scrolled #logo img {
