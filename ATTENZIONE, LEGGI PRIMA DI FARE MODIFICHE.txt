@@ -1,0 +1,4 @@
+hO SCOLLEGATO LA REPOSITORY PER PRIVACY.
+se vuoi fare modifiche devi ricollegarla o caricare direttamente tutta la cartella(ti consiglio la prima)
+vai su netlify, scegli il sito sedh, poi deploy, deploy settings, continuos deployment e infine link repository 
+e la ricolleghi

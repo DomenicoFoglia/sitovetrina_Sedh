@@ -1,236 +1,324 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Sedh | Il mondo illustrato di Fabio Caracciolo</title>
-        <!-- Open Graph Meta Tags -->
+        <title>Sedh | Cartoon</title>
+        <meta name="description" content="Anime, cartoon e creatività! Sedh, alias Fabio Caracciolo, dà vita a disegni originali tra matite, stile e passione." />
+        <!-- Open Graph -->
         <meta property="og:title" content="Sedh - Illustrazioni di Fabio Caracciolo" />
         <meta property="og:description" content="Anime, cartoon e creatività! Sedh, alias Fabio Caracciolo, dà vita a disegni originali tra matite, stile e passione." />
         <meta property="og:image" content="https://sedh.netlify.app/media/paint/cartoon/cards/Kid_Goku_We.webp" />
-        <meta property="og:url" content="https://sedh.netlify.app/" />
+        <meta property="og:url" content="https://sedh.netlify.app/cartoon.html" />
         <meta property="og:type" content="website" />
-        <!-- Standard Meta Description -->
-        <meta name="description" content="Anime, cartoon e creatività! Sedh, alias Fabio Caracciolo, dà vita a disegni originali tra matite, stile e passione." />
-        <!-- AOS CSS -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <!-- Bootstrap CSS CDN  -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <!-- Google fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-        <!-- FancyBox CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.css">
         <!-- Favicon -->
         <link rel="icon" type="image/png" href="media/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="media/favicon/favicon.svg" />
         <link rel="shortcut icon" href="media/favicon/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="media/favicon/apple-touch-icon.png" />
         <link rel="manifest" href="media/favicon/site.webmanifest" />
-
-        <!-- My CSS -->
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <!-- CSS -->
         <link rel="stylesheet" href="style.css">
-        <!-- Google tag (gtag.js) -->
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-MNEMC9L655"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-MNEMC9L655');
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-MNEMC9L655');
         </script>
     </head>
+
     <body class="body-cartoon">
-    
 
-    <!-- Navbar -->
-    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top py-3">
-        <div class="container-fluid position-relative">
-            <a class="navbar-brand" id="logo" href="index.html">
-                <img src="/media/firma_Sedh.png" alt="Firma" class="logo-img">
-                <!-- <h1><span id="logo-text">Art</span></h1> -->
-                
-            </a>
-            <img src="/media/LogoSedh.png" id="logo-png" alt="Logo piccolo" class="logo-img ">
-            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-    
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item me-3"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item me-3"><a class="nav-link active" href="cartoon.html">Cartoon</a></li>
-                    <li class="nav-item me-3"><a class="nav-link" href="pencil.html">Realisti</a></li>
-                    <li class="nav-item me-3"><a class="nav-link" href="artworks.html">Artworks</a></li>
-                    <li class="nav-item"><a class="nav-link" href="fabio.html">Chi sono & Contatti</a></li>
-                </ul>
-            </div>
+        <!-- Lightbox -->
+        <div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizzatore immagini">
+            <button id="lightbox-close" aria-label="Chiudi">&#x2715;</button>
+            <button class="lb-btn" id="lightbox-prev" aria-label="Immagine precedente">&#8249;</button>
+            <img id="lightbox-img" src="" alt="">
+            <p id="lightbox-caption"></p>
+            <button class="lb-btn" id="lightbox-next" aria-label="Immagine successiva">&#8250;</button>
         </div>
-    </nav>
-    <!-- / Navbar -->
 
-    <!-- Header -->
-    <header class="container mt-5">
-        <section class="image-container shadow">
-            <div class="text-overlay">
-                <h1>
-                    <span class="fw-bold fst-italic text-danger">Cartoon</span>
-                </h1>
-            </div>
-            <div class="half bg-cartoon-1"></div>
-            <div class="half bg-cartoon-2"></div>
-        </section>
-    </header>
-
-    <!-- / Header -->
-
-    <!-- Cards -->
-    <main class="container mt-5">
-        <!-- <section class="row justify-content-center">
-            <div class="col-12">
-                <h2 class="py-5">Kame<span class="color-q"> gum-gum</span></h2>
-            </div>
-        </section> -->
-
-        <section class="d-flex justify-content-center align-items-center">
-            <article class="row justify-content-center">
-                <div class="col-12 col-md-5 mt-2">
-                    <div class="gallery shadow">
-                        <a href="media/paint/cartoon/cards/Charmander_We.webp" data-fancybox="gallery" data-caption="Charmander">
-                            <img src="media/paint/cartoon/cards/Charmander_We.webp" alt="Charmander" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Homer_We.webp" data-fancybox="gallery" data-caption="Homer">
-                            <img src="media/paint/cartoon/cards/Homer_We.webp" alt="Homer" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Nuvola_Alba_We.webp" data-fancybox="gallery" data-caption="Nuvola Akatsuki">
-                            <img src="media/paint/cartoon/cards/Nuvola_Alba_We.webp" alt="Nuvola Akatsuki" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Evil_Buu_We.webp" data-fancybox="gallery" data-caption="Evil Buu">
-                            <img src="media/paint/cartoon/cards/Evil_Buu_We.webp" alt="Evil Buu" class="rounded-3 w-100">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-12 col-md-5 mt-2">
-                    <div class="gallery col-5 shadow">
-                        <a href="media/paint/cartoon/cards/Nuvola_Speedy_We.webp" data-fancybox="gallery" data-caption="Nuvola speedy">
-                            <img src="media/paint/cartoon/cards/Nuvola_Speedy_We.webp" alt="Nuvola speedy" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Lucky_luke_We.webp" data-fancybox="gallery" data-caption="Lucky Luke">
-                            <img src="media/paint/cartoon/cards/Lucky_luke_We.webp" alt="Lucky Luke" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Mario_We.webp" data-fancybox="gallery" data-caption="Super Mario">
-                            <img src="media/paint/cartoon/cards/Mario_We.webp" alt="Super Mario" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Queen_We.webp" data-fancybox="gallery" data-caption="Queen">
-                            <img src="media/paint/cartoon/cards/Queen_We.webp" alt="Queen" class="rounded-3 w-100">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-md-5 mt-2">
-                    <div class="gallery col-5 shadow">
-                        <a href="media/paint/cartoon/cards/Wonder_Boy_We.webp" data-fancybox="gallery" data-caption="Wonder_Boy">
-                            <img src="media/paint/cartoon/cards/Wonder_Boy_We.webp" alt="Wonder_Boy" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Hulk_We.webp" data-fancybox="gallery" data-caption="Hulk">
-                            <img src="media/paint/cartoon/cards/Hulk_We.webp" alt="Hulk" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Kid_Goku_We.webp" data-fancybox="gallery" data-caption="Kid Goku">
-                            <img src="media/paint/cartoon/cards/Kid_Goku_We.webp" alt="Kid Goku" class="rounded-3 w-100">
-                        </a>
-                        <a href="media/paint/cartoon/cards/Luffy_We.webp" data-fancybox="gallery" data-caption="Ruffy">
-                            <img src="media/paint/cartoon/cards/Luffy_We.webp" alt="Luffy" class="rounded-3 w-100">
-                        </a>
-                        
-                    </div>
-                </div>
-                
-            </article>
-            
-        </section>
-    
-        
-    </main>
-    <!-- / Cards -->
-
-
-    <!-- Footer -->
-    <footer class="footer bg-dark text-light py-5 mt-5">
-        <div class="container text-center">
-
-            <!-- Logo -->
-            <div class="footer-logo mb-4">
-                <img src="/media/logo_Sedh-removebg.png" alt="Logo Sedh" class="footer-logo-img" style="max-height: 80px;">
-            </div>
-
-            <!-- Contatti e social -->
-            <div class="mb-3">
-                <p class="mb-2 fw-bold">Contattami</p>
-                <div class="social-icons d-flex justify-content-center gap-4">
-                    <a href="https://www.facebook.com/fcaracciolo2" target="_blank" class="text-light" aria-label="Facebook di Sedh | Fabio Caracciolo">
-                        <i class="fa-brands fa-facebook fa-2x"></i>
-                    </a>
-                    <a href="https://www.instagram.com/fa_bi_o83/" target="_blank" class="text-light" aria-label="Instagram di Sedh | Fabio Caracciolo">
-                        <i class="fa-brands fa-instagram fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Diritti -->
-            <p class="mb-1">© 2025 - Tutti i diritti riservati</p>
-
-            <!-- Autore -->
-            <p class="copyright text-center">
-                Made with friendship by 
-                <strong>Domenico Foglia</strong>
-                <a class="text-light mx-2" target="_blank" href="https://github.com/DomenicoFoglia" aria-label="GitHub">
-                    <i class="fa-brands fa-github"></i>
+        <!-- Navbar -->
+        <nav id="mainNavbar" class="navbar">
+            <div class="nav-inner">
+                <a id="logo" href="index.html" aria-label="Torna alla home">
+                    <img src="media/firma_Sedh.png" alt="Sedh">
                 </a>
-                <a class="text-light" target="_blank" href="https://www.linkedin.com/in/domenicofoglia/" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
+                <button class="navbar-toggler" id="navToggler" aria-expanded="false" aria-controls="navbarNav" aria-label="Apri menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link active" href="cartoon.html">Cartoon</a></li>
+                        <li><a class="nav-link" href="pencil.html">Realisti</a></li>
+                        <li><a class="nav-link" href="artworks.html">Artworks</a></li>
+                        <!-- <li><a class="nav-link" href="manga.html">Manga</a></li> -->
+                        <li><a class="nav-link" href="fabio.html">Chi sono &amp; Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="page-header">
+            <section class="image-container shadow">
+                <div class="text-overlay">
+                    <h1><span class="fw-bold fst-italic text-danger">Cartoon</span></h1>
+                </div>
+                <div class="half bg-cartoon-1"></div>
+                <div class="half bg-cartoon-2"></div>
+            </section>
+        </header>
+
+        <!-- Galleria -->
+        <main class="page-main">
+            <div class="gallery-bento reveal">
+                <a class="gallery-card lb-trigger" href="media/cartoon/Madara.webp" data-caption="Madara">
+                    <img src="media/cartoon/Madara.webp" alt="Madara" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Madara</span>
+                    </div>
                 </a>
-            </p>
-        </div>
-    </footer>
-    <!-- / Footer -->
+                <a class="gallery-card lb-trigger" href="media/cartoon/Pain.webp" data-caption="Pain">
+                    <img src="media/cartoon/Pain.webp" alt="Pain" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Pain</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Goku_Nuvola_Speedy_W.webp" data-caption="Goku Nuvola Speedy">
+                    <img src="media/cartoon/Goku_Nuvola_Speedy_W.webp" alt="Goku Nuvola Speedy" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Goku Nuvola Speedy</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Franky_W.webp" data-caption="Franky">
+                    <img src="media/cartoon/Franky_W.webp" alt="Franky" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Franky</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/C-18_W.webp" data-caption="C-18">
+                    <img src="media/cartoon/C-18_W.webp" alt="C-18" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">C-18</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Charmander_We.webp" data-caption="Charmander">
+                    <img src="media/cartoon/Charmander_We.webp" alt="Charmander" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Charmander</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Homer_We.webp" data-caption="Homer">
+                    <img src="media/cartoon/Homer_We.webp" alt="Homer" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Homer</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Nuvola_Alba_We.webp" data-caption="Nuvola Akatsuki">
+                    <img src="media/cartoon/Nuvola_Alba_We.webp" alt="Nuvola Akatsuki" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Nuvola Akatsuki</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Evil_Buu_We.webp" data-caption="Evil Buu">
+                    <img src="media/cartoon/Evil_Buu_We.webp" alt="Evil Buu" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Evil Buu</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Nuvola_Speedy_We.webp" data-caption="Nuvola Speedy">
+                    <img src="media/cartoon/Nuvola_Speedy_We.webp" alt="Nuvola Speedy" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Nuvola Speedy</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Lucky_Luke_We.webp" data-caption="Lucky Luke">
+                    <img src="media/cartoon/Lucky_Luke_We.webp" alt="Lucky Luke" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Lucky Luke</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Mario_We.webp" data-caption="Super Mario">
+                    <img src="media/cartoon/Mario_We.webp" alt="Super Mario" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Super Mario</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Queen_We.webp" data-caption="Queen">
+                    <img src="media/cartoon/Queen_We.webp" alt="Queen" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Queen</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Wonder_Boy_We.webp" data-caption="Wonder Boy">
+                    <img src="media/cartoon/Wonder_Boy_We.webp" alt="Wonder Boy" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Wonder Boy</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Hulk_We.webp" data-caption="Hulk">
+                    <img src="media/cartoon/Hulk_We.webp" alt="Hulk" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Hulk</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Kid_Goku_We.webp" data-caption="Kid Goku">
+                    <img src="media/cartoon/Kid_Goku_We.webp" alt="Kid Goku" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Kid Goku</span>
+                    </div>
+                </a>
+                <a class="gallery-card lb-trigger" href="media/cartoon/Luffy_We.webp" data-caption="Luffy">
+                    <img src="media/cartoon/Luffy_We.webp" alt="Luffy" loading="lazy">
+                    <div class="gallery-card__overlay">
+                        <span class="gallery-card__caption">Luffy</span>
+                    </div>
+                </a>
+            </div>
+        </main>
 
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__inner">
+                <div class="footer__logo">
+                    <img src="media/logo_Sedh-removebg.png" alt="Logo Sedh">
+                </div>
+                <div class="footer__social">
+                    <p>Contattami</p>
+                    <div class="footer__social-links">
+                        <a href="https://www.facebook.com/fcaracciolo2" target="_blank" rel="noopener" aria-label="Facebook di Sedh | Fabio Caracciolo">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/fa_bi_o83/" target="_blank" rel="noopener" aria-label="Instagram di Sedh | Fabio Caracciolo">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <nav class="footer__nav" aria-label="Link rapidi">
+                    <a href="cartoon.html">Cartoon</a>
+                    <a href="pencil.html">Realisti</a>
+                    <a href="artworks.html">Artworks</a>
+                    <!-- <a href="manga.html">Manga</a> -->
+                    <a href="fabio.html">Chi sono &amp; Contatti</a>
+                </nav>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2025 - Tutti i diritti riservati</p>
+                <p class="footer__copyright">
+                    Made with friendship by <strong>Domenico Foglia</strong>
+                    <a href="https://github.com/DomenicoFoglia" target="_blank" rel="noopener" aria-label="GitHub di Domenico Foglia">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/domenicofoglia/" target="_blank" rel="noopener" aria-label="LinkedIn di Domenico Foglia">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </p>
+            </div>
+        </footer>
 
-        
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!-- AOS JS-->
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
-            AOS.init();
-        </script>
-        
-        <script>
-            window.addEventListener('scroll', () => {
-                const navbar = document.getElementById('mainNavbar');
-                const isHome = document.body.classList.contains('body-home');
+            /* ---- Hamburger ---- */
+            const navbar  = document.getElementById('mainNavbar');
+            const toggler = document.getElementById('navToggler');
+            const navMenu = document.getElementById('navbarNav');
 
-                if (isHome && window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-                } else if (isHome) {
-                navbar.classList.remove('scrolled');
+            toggler.addEventListener('click', () => {
+                const open = navMenu.classList.toggle('show');
+                toggler.setAttribute('aria-expanded', String(open));
+            });
+
+            document.addEventListener('click', (e) => {
+                if (!navbar.contains(e.target)) {
+                    navMenu.classList.remove('show');
+                    toggler.setAttribute('aria-expanded', 'false');
                 }
             });
 
-            window.addEventListener('DOMContentLoaded', () => {
-                const navbar = document.getElementById('mainNavbar');
-                if (!document.body.classList.contains('body-home')) {
-                navbar.classList.add('scrolled');
-                }
+            /* ---- Intersection Observer ---- */
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+            /* ---- Lightbox ---- */
+            const lb        = document.getElementById('lightbox');
+            const lbImg     = document.getElementById('lightbox-img');
+            const lbCaption = document.getElementById('lightbox-caption');
+            const lbClose   = document.getElementById('lightbox-close');
+            const lbPrev    = document.getElementById('lightbox-prev');
+            const lbNext    = document.getElementById('lightbox-next');
+
+            let lbItems = [], lbCurrent = 0;
+
+            function lbShow() {
+                const item = lbItems[lbCurrent];
+                lbImg.src  = item.href;
+                lbImg.alt  = item.caption;
+                lbCaption.textContent = item.caption;
+            }
+
+            function lbOpen(items, index) {
+                lbItems = items; lbCurrent = index;
+                lbShow();
+                lb.classList.add('open');
+                document.body.style.overflow = 'hidden';
+                lbClose.focus();
+            }
+
+            function lbCloseAction() {
+                lb.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+
+            const triggers = [...document.querySelectorAll('.lb-trigger')];
+            triggers.forEach((link, i) => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    lbOpen(triggers.map(a => ({
+                        href:    a.href,
+                        caption: a.dataset.caption || a.querySelector('img')?.alt || ''
+                    })), i);
+                });
+            });
+
+            lbClose.addEventListener('click', lbCloseAction);
+            lb.addEventListener('click', (e) => { if (e.target === lb) lbCloseAction(); });
+            lbPrev.addEventListener('click', () => { lbCurrent = (lbCurrent - 1 + lbItems.length) % lbItems.length; lbShow(); });
+            lbNext.addEventListener('click', () => { lbCurrent = (lbCurrent + 1) % lbItems.length; lbShow(); });
+
+            document.addEventListener('keydown', (e) => {
+                if (!lb.classList.contains('open')) return;
+                if (e.key === 'Escape')     lbCloseAction();
+                if (e.key === 'ArrowLeft')  { lbCurrent = (lbCurrent - 1 + lbItems.length) % lbItems.length; lbShow(); }
+                if (e.key === 'ArrowRight') { lbCurrent = (lbCurrent + 1) % lbItems.length; lbShow(); }
+            });
+
+            /* ---- Page transition ---- */
+            document.querySelectorAll('a[href]').forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto') || link.target === '_blank' || link.classList.contains('lb-trigger')) return;
+                link.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.body.classList.add('page-exit');
+                    setTimeout(() => { window.location.href = href; }, 260);
+                });
             });
         </script>
 
-        <!-- FancyBox JS -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.0/dist/jquery.fancybox.min.js"></script>
     </body>
 </html>
