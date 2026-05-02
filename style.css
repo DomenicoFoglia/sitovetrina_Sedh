@@ -491,7 +491,7 @@ p {
   letter-spacing: 0.04em;
   line-height: 1;
   /* sfondo giallo stile fumetto con ombra sfalsata */
-  background: rgba(254,185,20,0.95);
+  background: rgba(254,185,20,0.50);
   padding: 0.45rem 1.75rem 0.55rem;
   border-radius: var(--radius-md);
   border: 3px solid var(--color-s);
@@ -509,7 +509,7 @@ p {
   content: '';
   position: absolute;
   inset: -7px;
-  border: 2px dashed rgba(46,45,45,0.2);
+  border: 2px dashed rgba(46,45,45,0.9);
   border-radius: calc(var(--radius-md) + 4px);
   pointer-events: none;
 }
